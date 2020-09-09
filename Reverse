@@ -1,0 +1,3 @@
+def Reverse(Pattern):
+    # your code here
+    return Pattern[::-1]
