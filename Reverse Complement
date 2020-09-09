@@ -1,0 +1,6 @@
+def RC(Dna):
+    d = {'A':'T', "C":"G", "G":"C", "T":"A"}
+    c = ""
+    for i in range(len(Dna)) [::-1]:
+        c += d[Dna[i]]
+    return c
