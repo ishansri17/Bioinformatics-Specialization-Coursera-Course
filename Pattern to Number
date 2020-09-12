@@ -1,0 +1,21 @@
+def Prefix(pattern):
+    characters = pattern[:len(pattern)-1]
+    return(characters)
+
+def LastSymbolToNumber(pattern):
+    nuc_dict = {'A': 0, 'C': 1, 'G': 2, 'T': 3}
+    LastSymbol = pattern[-1]
+    LastSymbolValue = nuc_dict[LastSymbol]
+    return(LastSymbolValue)
+
+def PatternToNumber(pattern):
+    print('function has been called with pattern = %s' % (pattern))
+    if len(pattern) == 0:
+        return 0
+    else:
+        prefix = Prefix(pattern)
+        res = (4 * PatternToNumber(prefix)) + LastSymbolToNumber(pattern)
+        print('intermdiate result for %s is: %d' % (prefix, res))
+        return(res)
+        
+  
