@@ -1,0 +1,17 @@
+#Find number of patterns with at most a certain # of mismatches
+def ApproximatePatternCount(Text, Pattern, d): 
+    count = 0
+    for i in range(len(Text)-len(Pattern)+1):
+        pat = Text[i:i+len(Pattern)]
+        if HammingDistance(pat, Pattern) <= d:
+            count += 1
+    return count
+
+# Insert your HammingDistance function on the following line.
+def HammingDistance(p, q):
+    # your code here
+    count = 0
+    for i in range(len(p)):
+        if p[i] != q[i]:
+            count += 1
+    return count
