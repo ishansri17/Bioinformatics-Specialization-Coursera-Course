@@ -1,0 +1,3 @@
+def Prefix(pattern):
+    characters = pattern[:len(pattern)-1]
+    return(characters)
